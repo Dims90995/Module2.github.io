@@ -86,3 +86,49 @@ p {
   font-weight: bold;
   color: rgba(0, 0, 0, 0.767);
 }
+
+.header {
+  position: relative;
+  padding: 1rem;
+  text-align: center;
+}
+
+.button {
+  position: absolute;
+  left: 1rem;
+  margin-top: 35px;
+  transform: translateY(-50%);
+  padding: 0.75em 1.5em;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(45deg, #4facfe, #00f2fe);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.button:hover {
+  /* Keep the same horizontal translation (none) and just tweak the Y or scale if desired */
+  transform: translateY(-50%) scale(1.01);
+  /* or transform: translateY(-52%) scale(1.01); */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(45deg, #00f2fe, #4facfe);
+}
+.button:active {
+  transform: translateY(-50%) scale(1.01);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sort {
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 100px;
+  font-size: 2rem;
+  font-weight: bold;
+}
