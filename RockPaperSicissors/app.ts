@@ -31,5 +31,17 @@ playerDisplay.textContent = `PLAYER: ${playerChoice}`;
 computerDisplay.textContent = `Computer: ${computerChoice}`;
 resultDisplay.textContent = result;
 
+resultDisplay.classList.remove("greenText", "redText");
+
+switch(result){
+    case "You win!":
+        resultDisplay.classList.add("greenText");
+        break;
+        case "You lose!":
+            resultDisplay.classList.add("redText");
+            break;
+            default:
+                resultDisplay.style.color = "black";
+}
 
 }
