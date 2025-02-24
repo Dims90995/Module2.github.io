@@ -28,11 +28,6 @@ h1 {
 
 .choices button:hover {
   background-color: #66ccff;
-  font-size: 7.5rem;
-  min-width: 160px;
-  margin: 0 10px;
-  border-radius: 250px;
-  background-color: aquamarine;
 }
 
 #playerDisplay, #computerDisplay {
