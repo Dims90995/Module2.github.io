@@ -56,6 +56,17 @@ function checkWinner() {
             break;
         }
     }
+    if (roundWon) {
+        statusText.textContent = currentPlayer + " wins!";
+        running = false;
+    }
+    else if (options.includes("") == false) {
+        statusText.textContent = "Draw!";
+        running = false;
+    }
+    else {
+        changePlayer();
+    }
 }
 function restartGame() {
 }
