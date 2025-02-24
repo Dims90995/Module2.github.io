@@ -50,15 +50,15 @@ function checkWinner(){
  let roundWon = false;
     for(let i = 0; i < winConditions.length; i++){
         const winCondition = winConditions[i];
-        const a = options[winCondition[0]];
-        const b = options[winCondition[1]];
-        const c = options[winCondition[2]];
+        const cellA = options[winCondition[0]];
+        const cellB = options[winCondition[1]];
+        const cellC = options[winCondition[2]];
     
-        if(a === "" || b === "" || c === ""){
+        if(cellA == "" || cellB == "" || cellC == ""){
             continue;
         }
     
-        if(a === b && b === c){
+        if(cellA == cellB && cellB == cellC){
             roundWon = true;
             break;
         }

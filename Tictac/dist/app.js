@@ -45,13 +45,13 @@ function checkWinner() {
     var roundWon = false;
     for (var i = 0; i < winConditions.length; i++) {
         var winCondition = winConditions[i];
-        var a = options[winCondition[0]];
-        var b = options[winCondition[1]];
-        var c = options[winCondition[2]];
-        if (a === "" || b === "" || c === "") {
+        var cellA = options[winCondition[0]];
+        var cellB = options[winCondition[1]];
+        var cellC = options[winCondition[2]];
+        if (cellA == "" || cellB == "" || cellC == "") {
             continue;
         }
-        if (a === b && b === c) {
+        if (cellA == cellB && cellB == cellC) {
             roundWon = true;
             break;
         }
