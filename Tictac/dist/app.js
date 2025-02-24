@@ -69,4 +69,9 @@ function checkWinner() {
     }
 }
 function restartGame() {
+    currentPlayer = "X";
+    options = ["", "", "", "", "", "", "", "", ""];
+    statusText.textContent = currentPlayer + "'s turn";
+    cells.forEach(function (cell) { return cell.textContent = ""; });
+    running = true;
 }
