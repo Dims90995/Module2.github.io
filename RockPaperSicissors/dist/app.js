@@ -33,12 +33,12 @@ function playGame(playerChoice) {
         case "YOU WIN!":
             resultDisplay.classList.add("greenText");
             playerScore++;
-            playerScoreDisplay.textContent = playerScore;
+            playerScoreDisplay.textContent = playerScore.toString();
             break;
         case "YOU LOSE!":
             resultDisplay.classList.add("redText");
             computerScore++;
-            computerScoreDisplay.textContent = computerScore;
+            computerScoreDisplay.textContent = computerScore.toString();
             break;
     }
 }
