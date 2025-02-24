@@ -10,18 +10,18 @@ function playGame(playerChoice) {
     var computerChoice = choices[Math.floor(Math.random() * 3)];
     var result = "";
     if (playerChoice === computerChoice) {
-        result = "It's a tie!";
+        result = "IT'S A TIE!";
     }
     else {
         switch (playerChoice) {
             case "rock":
-                result = (computerChoice === "scissors") ? "You win!" : "You lose!";
+                result = (computerChoice === "scissors") ? "YOU WIN!" : "YOU LOSE!";
                 break;
             case "paper":
-                result = (computerChoice === "rock") ? "You win!" : "You lose!";
+                result = (computerChoice === "rock") ? "YOU WIN!" : "YOU LOSE!";
                 break;
             case "scissors":
-                result = (computerChoice === "paper") ? "You win!" : "You lose!";
+                result = (computerChoice === "paper") ? "YOU WIN!" : "YOU LOSE!";
                 break;
         }
     }
@@ -33,12 +33,12 @@ function playGame(playerChoice) {
         case "YOU WIN!":
             resultDisplay.classList.add("greenText");
             playerScore++;
-            playerScoreDisplay.textContent = playerScore.toString();
+            playerScoreDisplay.textContent = playerScore;
             break;
         case "YOU LOSE!":
             resultDisplay.classList.add("redText");
             computerScore++;
-            computerScoreDisplay.textContent = computerScore.toString();
+            computerScoreDisplay.textContent = computerScore;
             break;
     }
 }
