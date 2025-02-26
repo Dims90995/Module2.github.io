@@ -1,4 +1,3 @@
-// Save user data in localStorage as a JSON string
 function saveUser(user) {
     var users = [];
     var storedUsers = localStorage.getItem('users');
@@ -8,7 +7,6 @@ function saveUser(user) {
     users.push(user);
     localStorage.setItem('users', JSON.stringify(users));
 }
-// Retrieve a user by username
 function getUser(username) {
     var storedUsers = localStorage.getItem('users');
     if (storedUsers) {
@@ -22,21 +20,18 @@ document.addEventListener("DOMContentLoaded", function () {
     var loginTab = document.getElementById('login-tab');
     var registerFormDiv = document.getElementById('register-form');
     var loginFormDiv = document.getElementById('login-form');
-    // Switch to Register tab
     registerTab.addEventListener('click', function () {
         registerTab.classList.add('active');
         loginTab.classList.remove('active');
         registerFormDiv.classList.add('active');
         loginFormDiv.classList.remove('active');
     });
-    // Switch to Login tab
     loginTab.addEventListener('click', function () {
         loginTab.classList.add('active');
         registerTab.classList.remove('active');
         loginFormDiv.classList.add('active');
         registerFormDiv.classList.remove('active');
     });
-    // Registration form handler
     var regForm = registerFormDiv.querySelector('form');
     regForm.addEventListener('submit', function (e) {
         e.preventDefault();
@@ -53,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
         regForm.reset();
         loginTab.click();
     });
-    // Login form handler
     var loginForm = loginFormDiv.querySelector('form');
     loginForm.addEventListener('submit', function (e) {
         e.preventDefault();
@@ -61,7 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
         var password = document.getElementById('login-password').value;
         var user = getUser(username);
         if (user && user.password === password) {
-            // Redirect to the desired page upon successful login
             window.location.href = "/Homepage.html/Main.html";
         }
         else {

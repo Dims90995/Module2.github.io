@@ -4,7 +4,7 @@ interface User {
   password: string;
 }
 
-// Save user data in localStorage as a JSON string
+
 function saveUser(user: User): void {
   let users: User[] = [];
   const storedUsers = localStorage.getItem('users');
@@ -15,7 +15,7 @@ function saveUser(user: User): void {
   localStorage.setItem('users', JSON.stringify(users));
 }
 
-// Retrieve a user by username
+
 function getUser(username: string): User | null {
   const storedUsers = localStorage.getItem('users');
   if (storedUsers) {
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const registerFormDiv = document.getElementById('register-form') as HTMLDivElement;
   const loginFormDiv = document.getElementById('login-form') as HTMLDivElement;
 
-  // Switch to Register tab
+
   registerTab.addEventListener('click', () => {
     registerTab.classList.add('active');
     loginTab.classList.remove('active');
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loginFormDiv.classList.remove('active');
   });
 
-  // Switch to Login tab
+
   loginTab.addEventListener('click', () => {
     loginTab.classList.add('active');
     registerTab.classList.remove('active');
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     registerFormDiv.classList.remove('active');
   });
 
-  // Registration form handler
+
   const regForm = registerFormDiv.querySelector('form')!;
   regForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loginTab.click();
   });
 
-  // Login form handler
+
   const loginForm = loginFormDiv.querySelector('form')!;
   loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     const user = getUser(username);
     if(user && user.password === password){
-      // Redirect to the desired page upon successful login
+
       window.location.href = "/Homepage.html/Main.html";
     } else {
       alert("Invalid username or password.");
