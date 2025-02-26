@@ -20,30 +20,6 @@
   margin: 0 auto;
 }
 
-.sort {
-  background-color: aquamarine;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  width: 100%;
-  height: 100px;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.header {
-  position: relative;
-  padding: 1rem;
-  text-align: center;
-}
-
-.header {
-  position: relative;
-  padding: 1rem;
-  text-align: center;
-}
-
 .button {
   position: absolute;
   left: 1rem;
@@ -61,9 +37,7 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 .button:hover {
-  /* Keep the same horizontal translation (none) and just tweak the Y or scale if desired */
   transform: translateY(-50%) scale(1.01);
-  /* or transform: translateY(-52%) scale(1.01); */
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
   background: linear-gradient(45deg, #00f2fe, #4facfe);
 }

@@ -1,5 +1,4 @@
 .sort {
-  background-color: aquamarine;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,9 +32,7 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 .button:hover {
-  /* Keep the same horizontal translation (none) and just tweak the Y or scale if desired */
   transform: translateY(-50%) scale(1.01);
-  /* or transform: translateY(-52%) scale(1.01); */
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
   background: linear-gradient(45deg, #00f2fe, #4facfe);
 }
@@ -51,6 +48,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: bisque;
 }
 
 h1 {
@@ -95,4 +93,13 @@ h1 {
 
 .redText, #computerScoreDisplay {
   color: #ef4343;
+}
+
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  width: 100%;
+  padding: 20px;
 }

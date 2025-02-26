@@ -13,7 +13,7 @@
 }
 
 .sort{
-    background-color: aquamarine;
+    background-color:rgba(255, 255, 255, 0.8);;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,7 +25,7 @@
 }
 .clock {
     position: absolute;     
-    left: 1rem;            
+    right: 1rem;            
     margin-top: 35px;             
     transform: translateY(-50%);
     font-size: 2rem;
@@ -54,4 +54,12 @@ p {
     height: 100px;
     font-size: 3.5rem;
     font-weight: bold;
+}
+
+.duck {
+    margin: 20px;
+    display: block;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
