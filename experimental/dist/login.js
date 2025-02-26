@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var password = document.getElementById('login-password').value;
         var user = getUser(username);
         if (user && user.password === password) {
-            window.location.href = "/Homepage.html/Main.html";
+            window.location.href = "Main.html";
         }
         else {
             alert("Invalid username or password.");
